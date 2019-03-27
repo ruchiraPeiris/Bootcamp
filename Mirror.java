@@ -23,6 +23,8 @@ class Mirror{
 				stack.pop();
 				subCount++;
 			}
+			else
+				subCount=0;
 			//check if the number of characters in mirror image is greater than 2
 			if(subCount>2){
 				count++;
