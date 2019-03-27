@@ -7,7 +7,6 @@ class Mirror{
 		Scanner s=new Scanner(System.in);
 		System.out.println("insert word :");
 		String input=s.next();
-		System.out.println(input);
 		Stack stack=new Stack();
 		int count=0;
 		int subCount=0;
@@ -19,14 +18,18 @@ class Mirror{
 			stack.push(input.charAt(i));
 			//check if the top two elements are equal
 			if(previoustTop==(char)stack.peek()){
+				System.out.print(previoustTop);
 				stack.pop();
 				stack.pop();
 				subCount++;
 			}
-			else
+			
+			else if(!(input.charAt(i)==input.charAt(i+1)))
 				subCount=0;
+			
 			//check if the number of characters in mirror image is greater than 2
 			if(subCount>2){
+				System.out.println();
 				count++;
 				subCount=0;
 			}
